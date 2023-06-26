@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">db_coursework</string>
+    <string name="participants"> %s participants</string>
+    <string name="price"> %s $</string>
+    <string name="mentor_name">Mentor name: %s</string>
+    <string name="mentor_contacts">Mentor contacts: %s</string>
+    <string name="mentor_experience">Mentor years experience: %s</string>
+    <string name="income">Income: %s</string>
+    <string name="debt">Debt: %s</string>
+</resources>

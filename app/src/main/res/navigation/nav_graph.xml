@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="air.com.db_coursework.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action android:id="@+id/actionHomeFragment_to_CourseFragment"
+            app:destination="@id/CourseFragment"
+            app:popUpTo="@id/HomeFragment">
+            <argument
+                android:name="courseId"
+                app:argType="string" />
+        </action>
+        <action android:id="@+id/actionHomeFragment_to_StatisticsFragment"
+            app:destination="@id/StatisticsFragment"
+            app:popUpTo="@id/HomeFragment">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/CourseFragment"
+        android:name="air.com.db_coursework.ui.course.CourseFragment"
+        android:label="fragment_course"
+        tools:layout="@layout/fragment_course">
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+        <action android:id="@+id/actionCourseFragment_to_StudentFragment"
+            app:destination="@id/StudentFragment"
+            app:popUpTo="@id/CourseFragment">
+            <argument
+                android:name="courseId"
+                app:argType="string" />
+            <argument
+                android:name="studentId"
+                app:argType="string" />
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/StudentFragment"
+        android:name="air.com.db_coursework.ui.student.StudentFragment"
+        android:label="fragment_student"
+        tools:layout="@layout/fragment_student">
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/StatisticsFragment"
+        android:name="air.com.db_coursework.ui.statistics.StatisticsFragment"
+        android:label="fragment_statistics"
+        tools:layout="@layout/fragment_statistics">
+    </fragment>
+</navigation>
